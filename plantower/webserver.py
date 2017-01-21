@@ -42,7 +42,7 @@ class MyReceiver(ptmsg.PTReceiver):
 		MyReceiver.DATA = data
 
 def ReadData():
-	port = '/dev/ttyS1'
+	port = '/dev/ttyS0'
 	ser = serial.Serial(port, 9600, timeout = 1)
 	msg = ptmsg.PTMsg()
 	msg.setReceiver(MyReceiver())
